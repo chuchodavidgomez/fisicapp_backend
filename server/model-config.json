@@ -1,0 +1,75 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mongo",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "Course": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Module": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Theme": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Question": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Answer": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Question_qualification": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Answer_qualification": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Auxiliary": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "App-user": {
+    "dataSource": "mongo",
+    "public": true
+  }
+}

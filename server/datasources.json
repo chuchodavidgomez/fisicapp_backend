@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongo": {
+    "host": "ds125673.mlab.com",
+    "port": 25673,
+    "url": "",
+    "database": "fisicapp",
+    "password": "${FISICAPP_PASSWORD}",
+    "name": "mongo",
+    "user": "${FISICAPP_USER}",
+    "connector": "mongodb"
+  }
+}

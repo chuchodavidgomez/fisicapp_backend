@@ -1,0 +1,78 @@
+{
+  "name": "Question",
+  "plural": "question",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "statement": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string"
+    },
+    "creation_date": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "theme": {
+      "type": "belongsTo",
+      "model": "Theme",
+      "foreignKey": "id_theme"
+    },
+    "answers": {
+      "type": "hasMany",
+      "model": "Answer",
+      "foreignKey": "id_question"
+    },
+    "app-user": {
+      "type": "belongsTo",
+      "model": "App-user",
+      "foreignKey": "id_app_user"
+    },
+    "questionQualifications": {
+      "type": "hasMany",
+      "model": "Question_qualification",
+      "foreignKey": "id_question"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}
