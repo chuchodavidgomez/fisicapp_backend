@@ -56,19 +56,7 @@
       "permission": "DENY"
     },
     {
-      "accessType": "EXECUTE",
-      "principalType": "ROLE",
-      "principalId": "$unauthenticated",
-      "permission": "DENY"
-    },
-    {
       "accessType": "WRITE",
-      "principalType": "ROLE",
-      "principalId": "$owner",
-      "permission": "ALLOW"
-    },
-    {
-      "accessType": "EXECUTE",
       "principalType": "ROLE",
       "principalId": "$owner",
       "permission": "ALLOW"
