@@ -73,8 +73,27 @@
       "accessType": "EXECUTE",
       "principalType": "ROLE",
       "principalId": "$owner",
-      "permission": "DENY"
+      "permission": "ALLOW"
     }
   ],
-  "methods": {}
+  "methods": {
+    "whoami": {
+      "accepts": [],
+      "returns": [
+        {
+          "arg": "body",
+          "type": "object",
+          "root": true,
+          "description": ""
+        }
+      ],
+      "description": "Returns the person from the access token",
+      "http": [
+        {
+          "path": "/whoami",
+          "verb": "get"
+        }
+      ]
+    }
+  }
 }
